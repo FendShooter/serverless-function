@@ -1,0 +1,74 @@
+*, *::after, *::before{
+margin:0;
+padding:0;
+box-sizing:inherit
+}
+html{
+box-sizing:border-box;
+font-size: 62.5%
+}
+body{
+height:100%;
+}
+
+.container{
+  display:grid;
+  height: 100vh;
+  grid-template-columns: repeat (12, 1fr);
+  grid-template-rows: 7rem 1fr 7rem;
+}
+
+.title{
+  margin: 2rem;
+}
+.header,.footer{
+  padding: 2rem;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  background: rgb(68, 174, 236);
+  color: white;
+}
+.footer{
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+}
+
+article{
+  width: 42rem;
+  border: 1px solid rgb(233, 233, 233);
+  padding: 1rem;
+margin-top: 1rem;
+}
+.btn{
+  background: rgb(68, 174, 236);
+  padding:.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 1s;
+  
+}
+.btn:hover{
+  background: rgb(31, 120, 172);
+
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.main{
+    grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.name{
+  font-size: 2rem;
+}
+
+article > p {
+  margin: 1rem 0;
+  color: gray;
+  font-size: 1.5rem;
+}
